@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock Paper Scissors</title>
+		<link rel="icon" type="image/x-icon" href="./assets/favicon-16x16.png" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<!-- score card -->
+			<div class="scorecard" id="scorecard">
+				<div class="banner">
+					Rock <br />
+					Paper <br />
+					Scissors
+				</div>
+				<div class="score">
+					<div class="computer-score">
+						Computer Score <span class="digit" id="computer-score">0</span>
+					</div>
+					<div class="your-score">
+						Your Score <span class="digit" id="your-score">0</span>
+					</div>
+				</div>
+			</div>
+			<div class="bottom" id="bottom">
+				<!-- Playground(select your choice) -->
+				<div class="choice">
+					<div class="btn-container">
+						<btn
+							class="btn-circle btn-rock pick"
+							id="btn-rock"
+							selection="rock"
+						>
+							<span class="wrapper">
+								<img src="assets/rock.png" alt="fist denoting rock" />
+							</span>
+						</btn>
+						<btn
+							class="btn-circle btn-scissors pick"
+							id="btn-scissors"
+							selection="scissors"
+						>
+							<span class="wrapper">
+								<img
+									src="assets/scissors.png"
+									alt="two fingers denoting scissors"
+								/>
+							</span>
+						</btn>
+						<btn
+							class="btn-circle btn-paper pick"
+							id="btn-paper"
+							selection="paper"
+						>
+							<span class="wrapper">
+								<img src="assets/paper.png" alt="hand denoting paper" />
+							</span>
+						</btn>
+					</div>
+				</div>
+				<!-- Rules Button -->
+				<!-- <button class="btn-rules" id="rules">Rules</button> -->
+			</div>
+			<!-- Rules Popup -->
+			<div class="popup" id="popup">
+				<button class="cross" id="close">X</button>
+				<div class="popup-heading">Game Rules</div>
+				<div class="popup-body">
+					<ul class="rule">
+						<li>
+							<span></span>
+							<p>
+								Rock beats scissors, scissors beat paper, and paper beats rock.
+							</p>
+						</li>
+						<li>
+							<span></span>
+							<p>
+								Agree ahead of time whether you’ll count off “rock, paper,
+								scissors, shoot” or just “rock, paper, scissors.
+							</p>
+						</li>
+						<li>
+							<span></span>
+							<p>
+								Use rock, paper, scissors to settle minor decisions or simply
+								play to pass the time
+							</p>
+						</li>
+						<li>
+							<span></span>
+							<p>
+								If both players lay down the same hand, each player lays down
+								another hand
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="result" id="result">
+				<div class="your-choice">
+					<div class="you-picked">you picked</div>
+					<btn class="btn-circle btn-rock" id="your-choice">
+						<span class="wrapper"
+							><img src="assets/rock.png" alt="fist denoting rock"
+						/></span>
+					</btn>
+				</div>
+				<div class="status">
+					<div class="win-or-loss" id="draw">You Win</div>
+					<div class="against" id="against">Against PC</div>
+					<button class="play-again" id="play-again">Play Again</button>
+				</div>
+				<div class="pc-choice">
+					<div class="pc-picked">pc picked</div>
+					<btn class="btn-circle btn-scissors" id="pc-choice">
+						<span class="wrapper"
+							><img
+								src="assets/scissors.png"
+								alt="two fingers denoting scissors"
+						/></span>
+					</btn>
+				</div>
+				<!-- <btn class="btn-rules" id="rules"> Rules </btn> -->
+				<!-- <btn class="btn-next" id="next">Next</btn> -->
+			</div>
+			<btn class="btn-rules" id="rules-win"> Rules </btn>
+			<div class="win-page" id="winPage">
+				<div class="star-banner">
+					<img src="assets/Group 5.png" alt="background stars" />
+					<div class="trophy"><img src="assets/Vector.png" alt="" /></div>
+				</div>
+				<div class="hurray">HURRAY!!</div>
+				<div class="message">You won the game</div>
+				<button class="play-again" id="play-again-win">Play Again</button>
+				<!-- <button class="btn-rules" id="rules">Rules</button> -->
+			</div>
+			<!-- <btn class="btn-rules" id="rules"> Rules </btn> -->
+		</div>
+		<btn class="btn-next" id="next">Next</btn>
+		<btn class="btn-rules" id="rules"> Rules </btn>
+		<script src="script.js"></script>
+	</body>
+</html>
